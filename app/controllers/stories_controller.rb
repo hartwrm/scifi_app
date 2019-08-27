@@ -3,24 +3,24 @@ class StoriesController < ApplicationController
 
   # GET /stories
   # GET /stories.json
-  def index
-    @stories = Story.all
-  end
+  # def index
+  #   @stories = Story.all
+  # end
 
   # GET /stories/1
   # GET /stories/1.json
   def show
-
+    render json: @story
   end
 
   # GET /stories/new
-  def new
-    @story = Story.new
-  end
+  # def new
+  #   @story = Story.new
+  # end
 
   # GET /stories/1/edit
-  def edit
-  end
+  # def edit
+  # end
 
   # POST /stories
   # POST /stories.json
@@ -29,15 +29,15 @@ class StoriesController < ApplicationController
     @story = @sentence.prompt.create(story_params)
     redirect_to sentence_path(@sentence)
 
-    respond_to do |format|
-      if @story.save
-        format.html { redirect_to @story, notice: 'Story was successfully created.' }
-        format.json { render :show, status: :created, location: @story }
-      else
-        format.html { render :new }
-        format.json { render json: @story.errors, status: :unprocessable_entity }
-      end
-    end
+    # respond_to do |format|
+    #   if @story.save
+    #     format.html { redirect_to @story, notice: 'Story was successfully created.' }
+    #     format.json { render :show, status: :created, location: @story }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @story.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /stories/1
