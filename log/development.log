@@ -216,3 +216,141 @@ Processing by SentencesController#index as HTML
 Completed 200 OK in 48ms (Views: 43.0ms | ActiveRecord: 1.3ms | Allocations: 9781)
 
 
+Started GET "/sentences" for ::1 at 2019-08-26 21:35:56 -0400
+Processing by SentencesController#index as HTML
+  Rendering sentences/index.html.erb within layouts/application
+  [1m[36mSentence Load (0.6ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences"[0m
+  ↳ app/views/sentences/index.html.erb:13
+  Rendered sentences/_form.html.erb (Duration: 2.9ms | Allocations: 1645)
+  Rendered sentences/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 3210)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.6ms | Allocations: 4441)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_with(model: sentence, local: true) do |form| %>
+    2:   <% if sentence.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(sentence.errors.count, "error") %> prohibited this sentence from being saved:</h2>
+    5: 
+  
+app/views/sentences/_form.html.erb:2
+app/views/sentences/_form.html.erb:1
+app/views/sentences/index.html.erb:25
+Started GET "/sentences" for ::1 at 2019-08-26 21:36:38 -0400
+Processing by SentencesController#index as HTML
+  Rendering sentences/index.html.erb within layouts/application
+  [1m[36mSentence Load (3.2ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences"[0m
+  ↳ app/views/sentences/index.html.erb:13
+  Rendered sentences/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1368)
+Completed 200 OK in 73ms (Views: 67.0ms | ActiveRecord: 3.2ms | Allocations: 10956)
+
+
+Started GET "/sentences" for ::1 at 2019-08-26 21:41:58 -0400
+Processing by SentencesController#index as HTML
+  Rendering sentences/index.html.erb within layouts/application
+  [1m[36mSentence Load (0.5ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences"[0m
+  ↳ app/views/sentences/index.html.erb:13
+  Rendered sentences/index.html.erb within layouts/application (Duration: 378.0ms | Allocations: 152768)
+Completed 500 Internal Server Error in 383ms (ActiveRecord: 0.5ms | Allocations: 153998)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sentece' for #<#<Class:0x00007f81c4808228>:0x00007f81c0fade50>
+Did you mean?  sentence
+               @sentences):
+    12:   <tbody>
+    13:     <% @sentences.each do |sentence| %>
+    14:       <tr>
+    15:         <td><%= link_to sentece.prompt, sentence_path(sentence) %></td>
+    16:         <td><%= link_to 'Edit', edit_sentence_path(sentence) %></td>
+    17:         <td><%= link_to 'Destroy', sentence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    18:       </tr>
+  
+app/views/sentences/index.html.erb:15
+app/views/sentences/index.html.erb:13
+Started GET "/sentences" for ::1 at 2019-08-26 21:42:16 -0400
+Processing by SentencesController#index as HTML
+  Rendering sentences/index.html.erb within layouts/application
+  [1m[36mSentence Load (0.8ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences"[0m
+  ↳ app/views/sentences/index.html.erb:13
+  Rendered sentences/index.html.erb within layouts/application (Duration: 526.0ms | Allocations: 152730)
+Completed 500 Internal Server Error in 533ms (ActiveRecord: 0.8ms | Allocations: 153968)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sentece' for #<#<Class:0x00007f81bf7e5700>:0x00007f81bf7decc0>
+Did you mean?  sentence
+               @sentences):
+    12:   <tbody>
+    13:     <% @sentences.each do |sentence| %>
+    14:       <tr>
+    15:         <td><%= link_to sentece.prompt, sentence_path(@sentences) %></td>
+    16:         <td><%= link_to 'Edit', edit_sentence_path(sentence) %></td>
+    17:         <td><%= link_to 'Destroy', sentence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    18:       </tr>
+  
+app/views/sentences/index.html.erb:15
+app/views/sentences/index.html.erb:13
+Started GET "/sentences" for ::1 at 2019-08-26 21:42:45 -0400
+Processing by SentencesController#index as HTML
+  Rendering sentences/index.html.erb within layouts/application
+  [1m[36mSentence Load (1.7ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences"[0m
+  ↳ app/views/sentences/index.html.erb:13
+  Rendered sentences/index.html.erb within layouts/application (Duration: 26.0ms | Allocations: 4169)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.7ms | Allocations: 5403)
+
+
+  
+ActionView::Template::Error (undefined method `prompt' for #<Sentence:0x00007f81bd677f00>
+Did you mean?  prompts
+               prompts=
+               prompts?):
+    12:   <tbody>
+    13:     <% @sentences.each do |sentence| %>
+    14:       <tr>
+    15:         <td><%= link_to sentence.prompt, sentence_path(sentence) %></td>
+    16:         <td><%= link_to 'Edit', edit_sentence_path(sentence) %></td>
+    17:         <td><%= link_to 'Destroy', sentence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    18:       </tr>
+  
+app/views/sentences/index.html.erb:15
+app/views/sentences/index.html.erb:13
+Started GET "/sentences" for ::1 at 2019-08-26 21:42:54 -0400
+Processing by SentencesController#index as HTML
+  Rendering sentences/index.html.erb within layouts/application
+  [1m[36mSentence Load (2.7ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences"[0m
+  ↳ app/views/sentences/index.html.erb:13
+  Rendered sentences/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 1355)
+Completed 200 OK in 107ms (Views: 101.9ms | ActiveRecord: 2.7ms | Allocations: 10945)
+
+
+Started GET "/sentences/1" for ::1 at 2019-08-26 21:43:00 -0400
+Processing by SentencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSentence Load (0.6ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentences_controller.rb:67:in `set_sentence'
+  Rendering sentences/show.html.erb within layouts/application
+  Rendered sentences/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 226)
+Completed 200 OK in 21ms (Views: 15.2ms | ActiveRecord: 0.6ms | Allocations: 9553)
+
+
+Started GET "/sentences/1/edit" for ::1 at 2019-08-26 21:43:07 -0400
+Processing by SentencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSentence Load (0.7ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentences_controller.rb:67:in `set_sentence'
+  Rendering sentences/edit.html.erb within layouts/application
+  Rendered sentences/_form.html.erb (Duration: 3.2ms | Allocations: 670)
+  Rendered sentences/edit.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1081)
+Completed 200 OK in 25ms (Views: 20.5ms | ActiveRecord: 0.7ms | Allocations: 10404)
+
+
+Started GET "/sentences/new" for ::1 at 2019-08-26 21:43:19 -0400
+Processing by SentencesController#new as HTML
+  Rendering sentences/new.html.erb within layouts/application
+  Rendered sentences/_form.html.erb (Duration: 1.0ms | Allocations: 360)
+  Rendered sentences/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 579)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.0ms | Allocations: 9368)
+
+

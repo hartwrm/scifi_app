@@ -12,7 +12,7 @@
   <tbody>
     <% @sentences.each do |sentence| %>
       <tr>
-        <td><%= link_to 'Show', sentence %></td>
+        <td><%= link_to sentence.prompts, sentence_path(sentence) %></td>
         <td><%= link_to 'Edit', edit_sentence_path(sentence) %></td>
         <td><%= link_to 'Destroy', sentence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
