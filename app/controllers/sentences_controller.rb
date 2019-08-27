@@ -69,6 +69,6 @@ class SentencesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sentence_params
-      params.fetch(:sentence, {})
+      params.require(:sentence).permit(:prompt)
     end
 end

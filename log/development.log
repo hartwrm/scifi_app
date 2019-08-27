@@ -77,3 +77,142 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-08-26 21:23:33 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 241)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/hartwrm/Documents/Projects/scifi_app/public/packs
+Completed 200 OK in 7339ms (Views: 7337.1ms | ActiveRecord: 0.0ms | Allocations: 1551105)
+
+
+Started GET "/sentences" for ::1 at 2019-08-26 21:25:43 -0400
+Processing by SentencesController#index as HTML
+  Rendering sentences/index.html.erb within layouts/application
+  [1m[36mSentence Load (0.9ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences"[0m
+  ↳ app/views/sentences/index.html.erb:13
+  Rendered sentences/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1375)
+Completed 200 OK in 25ms (Views: 18.7ms | ActiveRecord: 3.4ms | Allocations: 11122)
+
+
+Started GET "/sentences/new" for ::1 at 2019-08-26 21:25:45 -0400
+Processing by SentencesController#new as HTML
+  Rendering sentences/new.html.erb within layouts/application
+  Rendered sentences/_form.html.erb (Duration: 18.6ms | Allocations: 3820)
+  Rendered sentences/new.html.erb within layouts/application (Duration: 20.5ms | Allocations: 4184)
+Completed 200 OK in 56ms (Views: 33.8ms | ActiveRecord: 9.0ms | Allocations: 15631)
+
+
+Started POST "/sentences" for ::1 at 2019-08-26 21:25:47 -0400
+Processing by SentencesController#create as HTML
+  Parameters: {"authenticity_token"=>"wx/Jz+8pRAtChprucP2w6eWI05oIpn/3pdcgBNnMGzJtXEI6g3K0zqSFgi8rKWJ1KBGOXTxlm3T6S4XQt2Tc+Q==", "commit"=>"Create Sentence"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 683)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: sentence):
+  
+app/controllers/sentences_controller.rb:72:in `sentence_params'
+app/controllers/sentences_controller.rb:27:in `create'
+Started GET "/sentences" for ::1 at 2019-08-26 21:25:52 -0400
+Processing by SentencesController#index as HTML
+  Rendering sentences/index.html.erb within layouts/application
+  [1m[36mSentence Load (0.4ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences"[0m
+  ↳ app/views/sentences/index.html.erb:13
+  Rendered sentences/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 659)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.4ms | Allocations: 9301)
+
+
+Started GET "/" for ::1 at 2019-08-26 21:25:52 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 77)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 8870)
+
+
+Started GET "/images" for ::1 at 2019-08-26 21:25:53 -0400
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/views/images/index.html.erb:16
+  Rendered images/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1347)
+Completed 200 OK in 34ms (Views: 25.1ms | ActiveRecord: 1.9ms | Allocations: 10861)
+
+
+Started GET "/images/new" for ::1 at 2019-08-26 21:25:54 -0400
+Processing by ImagesController#new as HTML
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/_form.html.erb (Duration: 6.4ms | Allocations: 2287)
+  Rendered images/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2643)
+Completed 200 OK in 34ms (Views: 19.4ms | ActiveRecord: 2.2ms | Allocations: 15191)
+
+
+Started GET "/sentences" for ::1 at 2019-08-26 21:26:05 -0400
+Processing by SentencesController#index as HTML
+  Rendering sentences/index.html.erb within layouts/application
+  [1m[36mSentence Load (1.0ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences"[0m
+  ↳ app/views/sentences/index.html.erb:13
+  Rendered sentences/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 666)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 1.0ms | Allocations: 9319)
+
+
+Started GET "/sentences/new" for ::1 at 2019-08-26 21:26:09 -0400
+Processing by SentencesController#new as HTML
+  Rendering sentences/new.html.erb within layouts/application
+  Rendered sentences/_form.html.erb (Duration: 2.6ms | Allocations: 355)
+  Rendered sentences/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 452)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 9105)
+
+
+Started GET "/sentences" for ::1 at 2019-08-26 21:27:08 -0400
+Processing by SentencesController#index as HTML
+  Rendering sentences/index.html.erb within layouts/application
+  [1m[36mSentence Load (0.4ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences"[0m
+  ↳ app/views/sentences/index.html.erb:13
+  Rendered sentences/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 660)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.4ms | Allocations: 9318)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSentence Create (1.0ms)[0m  [1m[32mINSERT INTO "sentences" ("created_at", "updated_at", "prompts") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2019-08-27 01:33:56.387190"], ["updated_at", "2019-08-27 01:33:56.387190"], ["prompts", "It’s not really a fly. If you swat it, they’ll just fine you and send two more."]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSentence Create (0.2ms)[0m  [1m[32mINSERT INTO "sentences" ("created_at", "updated_at", "prompts") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2019-08-27 01:33:56.392821"], ["updated_at", "2019-08-27 01:33:56.392821"], ["prompts", "We’re headed to Madam Maxime’s at the edge of the universe."]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSentence Create (0.2ms)[0m  [1m[32mINSERT INTO "sentences" ("created_at", "updated_at", "prompts") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2019-08-27 01:33:56.396338"], ["updated_at", "2019-08-27 01:33:56.396338"], ["prompts", "Why grieve when you can keep your loved one encased in Forever Glass™?"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSentence Create (0.2ms)[0m  [1m[32mINSERT INTO "sentences" ("created_at", "updated_at", "prompts") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2019-08-27 01:33:56.399961"], ["updated_at", "2019-08-27 01:33:56.399961"], ["prompts", "A group of intelligence-enhanced lab animals must find a way to communicate before their turn in the euthanization chamber."]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSentence Load (0.3ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/sentences" for ::1 at 2019-08-26 21:34:23 -0400
+Processing by SentencesController#index as HTML
+  Rendering sentences/index.html.erb within layouts/application
+  [1m[36mSentence Load (0.6ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences"[0m
+  ↳ app/views/sentences/index.html.erb:13
+  Rendered sentences/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3795)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.6ms | Allocations: 13049)
+
+
+Started GET "/sentences/1" for ::1 at 2019-08-26 21:34:26 -0400
+Processing by SentencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSentence Load (0.8ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences" WHERE "sentences"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentences_controller.rb:67:in `set_sentence'
+  Rendering sentences/show.html.erb within layouts/application
+  Rendered sentences/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 235)
+Completed 200 OK in 28ms (Views: 16.0ms | ActiveRecord: 1.4ms | Allocations: 10322)
+
+
+Started GET "/sentences" for ::1 at 2019-08-26 21:34:31 -0400
+Processing by SentencesController#index as HTML
+  Rendering sentences/index.html.erb within layouts/application
+  [1m[36mSentence Load (1.3ms)[0m  [1m[34mSELECT "sentences".* FROM "sentences"[0m
+  ↳ app/views/sentences/index.html.erb:13
+  Rendered sentences/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 1130)
+Completed 200 OK in 48ms (Views: 43.0ms | ActiveRecord: 1.3ms | Allocations: 9781)
+
+

@@ -1,5 +1,5 @@
 class StoriesController < ApplicationController
-  before_action :set_story, only: [:show, :edit, :update, :destroy]
+
 
   # GET /stories
   # GET /stories.json
@@ -10,6 +10,7 @@ class StoriesController < ApplicationController
   # GET /stories/1
   # GET /stories/1.json
   def show
+
   end
 
   # GET /stories/new
@@ -24,7 +25,9 @@ class StoriesController < ApplicationController
   # POST /stories
   # POST /stories.json
   def create
-    @story = Story.new(story_params)
+    @sentence = Sentence.find(params[:sentence_id])
+    @story = @sentence.prompt.create(story_params)
+    redirect_to sentence_path(@sentence)
 
     respond_to do |format|
       if @story.save
